@@ -4,8 +4,8 @@ import env from "../../config/vars.js";
 const downloadFile = async() => {
     const bucketName = env.gcVariables.bucketName;
 
-    const fileName = 'upload.txt';
-    const destFileName = './downloads/file.txt';
+    const fileName = 'uploadLatest.txt';
+    const destFileName = './downloads/uploadLatest.txt';
 
     const options = {
         destination: destFileName,
