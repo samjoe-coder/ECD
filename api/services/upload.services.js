@@ -1,32 +1,29 @@
-import { uploadFile } from "../services/upload.services.js";
+import gcStorage from "../../config/googleCloud.js";
+import env from "../../config/vars.js";
 
-const fileUpload = async (req, res) => {
+
+const uploadFile = async() => {
+    const bucketName = env.gcVariables.bucketName || 'edistro';
+    
+    const filePath = './upload3.txt';
+    const destFileName = 'upload3.txt';
+
+    const options = {
+        destination: destFileName,
+    };
+
     try {
-        await uploadFile();
-        res.send({"message" : "File uploaded successfully"});
+        await gcStorage.bucket(bucketName).upload(filePath, options);
+        console.log(`${filePath} uploaded to ${bucketName}`);
     } catch (error) {
         console.error('Error uploading file:', error);
     }
+    
 }
 
-export { fileUpload };
+export { uploadFile };
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import { Storage } from '@google-cloud/storage';
 
 // const uploadFile = async (req, res) => {   
  

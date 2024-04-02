@@ -4,7 +4,7 @@ import downloadFile from "./download.router.js";
 
 const router = Router();
 
-router.use('/uploads', uploadFile);
+router.use('/files', uploadFile);
 router.use('/downloads', downloadFile);
 
 export default router;
