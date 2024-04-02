@@ -1,9 +1,8 @@
 import gcStorage from "../../config/googleCloud.js";
 import env from "../../config/vars.js";
 
-
 const uploadFile = async() => {
-    const bucketName = env.gcVariables.bucketName || 'edistro';
+    const bucketName = env.gcVariables.bucketName;
     
     const filePath = './upload3.txt';
     const destFileName = 'upload3.txt';

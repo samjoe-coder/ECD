@@ -1,10 +1,10 @@
 import { Router } from "express";
 
-import downloads from "../controllers/download.controller.js";
+import { fileDownload } from "../controllers/download.controller.js";
 
 const router = Router();
 
-router.get("/downloadFile", downloads.downloadFile);
+router.get("/downloadFile", fileDownload);
 
 
 export default router;
