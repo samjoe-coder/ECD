@@ -1,7 +1,9 @@
 import sendPasswordAndFileLinkEmail from "../services/email.js";
-
+import passwordGeneration from "../services/passwordGeneration.js";
 const sendEmail = async (req, res) => {
-    const { customerEmail, fileLink, pdfPassword } = req.body;
+    const { customerEmail, fileLink } = req.body;
+
+    const pdfPassword = await passwordGeneration();
 
     try {
         await sendPasswordAndFileLinkEmail(customerEmail, fileLink, pdfPassword);
