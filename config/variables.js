@@ -14,5 +14,7 @@ export const variables = {
         name: process.env.DB_NAME,
         dialect: process.env.DB_DIALECT,
         storage : process.env.DB_STORAGE
-    }
+    },
+
+    ip: process.env.IPADDRESS
 };

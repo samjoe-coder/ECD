@@ -16,7 +16,7 @@ const sendPasswordAndFileLinkEmail = async (customerEmail, fileLink, pdfPassword
         subject: 'Test Email',
         html: `
             <h1>Thank you for your order!</h1>
-            <p>Here is your file link: <a href="http://192.168.50.187:3000/api/download/file?fileName=${fileLink}">${fileLink}</a></p>
+            <p>Here is your file link: <a href="http://${variables.ip}/api/download/file?fileName=${fileLink}">${fileLink}</a></p>
             <p>Here is your password: ${pdfPassword}</p>
         `
     };
