@@ -4,7 +4,7 @@ const downloadFile = async (fileName, res) => {
         res.setHeader('Content-Disposition', `attachment; filename="file.pdf"`);
         res.setHeader('Content-Type', 'application/pdf');
 
-        const filePath = `files/${fileName}`;
+        const filePath = `/home/ubuntu/ECD/files/${fileName}`;
         res.sendFile(filePath, (err) => {
             if(err) {
                 console.error('Error sending file:', err);
