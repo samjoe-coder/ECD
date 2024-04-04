@@ -1,11 +1,9 @@
-import path from 'path';
-
 const downloadFile = async (req, res) => {
 
     const fileName = req.query.fileName;
 
     try{
-        res.setHeader('Content-Disposition', `attachment; filename="${fileName}"`);
+        res.setHeader('Content-Disposition', `attachment; filename="file.pdf"`);
         res.setHeader('Content-Type', 'application/pdf');
 
         // Send the file to the client

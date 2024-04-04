@@ -28,6 +28,8 @@
     "express": "^4.19.2",
     "nodemailer": "^6.9.13",
     "nodemon": "^3.1.0",
-    "qpdf": "^0.1.0-prealpha.1"
+    "qpdf": "^0.1.0-prealpha.1",
+    "sequelize": "^6.37.2",
+    "sqlite3": "^5.1.7"
   }
 }
